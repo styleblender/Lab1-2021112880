@@ -6,8 +6,7 @@ package com.se.lab1;
 import java.io.*;
 import java.util.Scanner;
 
-import javax.swing.JComponent;
-
+//this is the first time for modifying
 public class Lab1  {
   public static String fileUrl;
   public static String[] words;
