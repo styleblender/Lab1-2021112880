@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.Scanner;
 
 //this is the first time for modifying
+//this is the second time for modifying
 public class Lab1  {
   public static String fileUrl;
   public static String[] words;
