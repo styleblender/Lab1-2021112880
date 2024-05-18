@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 //this is the first time for modifying
 //this is the second time for modifying
-//this is the modify on B1
+
+//this is the modify on branch C4, conflict solved
 public class Lab1  {
   public static String fileUrl;
   public static String[] words;
