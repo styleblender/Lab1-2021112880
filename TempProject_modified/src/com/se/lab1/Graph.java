@@ -3,6 +3,7 @@ package com.se.lab1;
 import java.util.ArrayList;
 import java.util.Random;
 
+//this is the modify on B2
 /**
  * @author Yumi
  *
