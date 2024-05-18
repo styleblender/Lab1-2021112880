@@ -10,7 +10,9 @@ import java.util.Random;
 class Graph {
   GraphNode head;
   GraphNodeList<GraphNode> graphNodes;
-
+	
+	//this is the modify on B1
+	
   public Graph(String[] words) {
     GraphNode nodepr, nodeafter;
     this.head = new GraphNode(words[0], null);
