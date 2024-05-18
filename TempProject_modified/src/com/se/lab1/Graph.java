@@ -7,6 +7,8 @@ import java.util.Random;
  * @author Yumi
  *
  */
+ 
+ //this is the modify on branch C4
 class Graph {
   GraphNode head;
   GraphNodeList<GraphNode> graphNodes;
