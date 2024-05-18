@@ -12,6 +12,8 @@ import java.util.Scanner;
 
 //this is the modify on branch C4, conflict solved
 //the final modified version on 2021112880
+
+//this is the modify on branch C4, conflict solved
 public class Lab1  {
   public static String fileUrl;
   public static String[] words;
