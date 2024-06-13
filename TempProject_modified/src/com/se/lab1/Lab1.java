@@ -15,7 +15,7 @@ public class Lab1  {
 
   public static void main(String[] args) throws CloneNotSupportedException {
     System.out.println("这里是修改2");
-    fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
+    fileUrl = "C:\\lessons\\2024spring\\software\\lab\\lab1\\code\\test.txt";
     readInFile();
     Scanner sc = new Scanner(System.in);
     while (true){
