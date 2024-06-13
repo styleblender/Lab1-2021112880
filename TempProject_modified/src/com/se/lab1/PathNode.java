@@ -3,10 +3,7 @@
  */
 package com.se.lab1;
 
-/**
- * @author Yumi
- *
- */
+
 public class PathNode {
   int pathLength;
   GraphNode presentNode;

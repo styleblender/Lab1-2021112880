@@ -2,10 +2,8 @@ package com.se.lab1;
 
 import java.util.ArrayList;
 
-/**
- * @author Yumi
- *
- */
+
+
 class GraphNode {
   String word;
   GraphNodeList<GraphNode> parentList;

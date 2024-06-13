@@ -6,23 +6,16 @@ package com.se.lab1;
 import java.io.*;
 import java.util.Scanner;
 
-//this is the first time for modifying
-//this is the second time for modifying
-//this is the modify on B2
+import javax.swing.JComponent;
 
-//this is the modify on branch C4, conflict solved
-//the final modified version on 2021112880
-
-//this is the modify on branch C4, conflict solved
-
-//on branch 2021112880, modifying it with IDE and commit with IDE
 public class Lab1  {
   public static String fileUrl;
   public static String[] words;
   public static Graph t;
 
   public static void main(String[] args) throws CloneNotSupportedException {
-    fileUrl = "C:\\lessons\\2024spring\\software\\lab\\lab1\\code\\test.txt";
+    System.out.println("这里是修改2");
+    fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
     readInFile();
     Scanner sc = new Scanner(System.in);
     while (true){
@@ -73,8 +66,7 @@ public class Lab1  {
   /**
    * 处理读入的字符串(删除标点符号，并转换为小写)
    * 
-   * @param str
-   *          读入的字符串
+   * @param str 读入的字符串
    * @return 处理后的字符串
    */
   public static String replaceStr(String str) {

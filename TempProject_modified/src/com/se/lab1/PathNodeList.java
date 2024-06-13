@@ -5,11 +5,7 @@ package com.se.lab1;
 
 import java.util.ArrayList;
 
-/**
- * @author Yumi
- * @param <E>
- *
- */
+
 public class PathNodeList<E> extends ArrayList<E> {
 
   public boolean push(E e) {

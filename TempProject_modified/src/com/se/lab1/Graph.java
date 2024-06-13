@@ -3,19 +3,11 @@ package com.se.lab1;
 import java.util.ArrayList;
 import java.util.Random;
 
-//this is the modify on B2
-/**
- * @author Yumi
- *
- */
- 
- //this is the modify on branch C4
+
 class Graph {
   GraphNode head;
   GraphNodeList<GraphNode> graphNodes;
-	
-	//this is the modify on B1
-	
+
   public Graph(String[] words) {
     GraphNode nodepr, nodeafter;
     this.head = new GraphNode(words[0], null);
@@ -51,7 +43,8 @@ class Graph {
     } else {
       if (retNodes.size() == 1) {
         // The bridge word from word1 to word2 is: .
-        res += "The bridge word from " + word1 + " to " + word2 + " is: " + retNodes.get(0).getWord() + ".";
+        res += "The bridge word from " + word1 + " to " + word2 + " is: "
+                + retNodes.get(0).getWord() + ".";
       } else {
         // The bridge words from word1 to word2 are: xxx, xxx, and xxx.
         res += "The bridge words from " + word1 + " to " + word2 + " are:";
@@ -107,7 +100,8 @@ class Graph {
 
   public String calcShortestPath(String word1, String word2) throws CloneNotSupportedException {
     String res = "";
-    GraphNode startNode = this.graphNodes.nodeCheck(word1), endNode = this.graphNodes.nodeCheck(word2);
+    GraphNode startNode = this.graphNodes.nodeCheck(word1);
+    GraphNode endNode = this.graphNodes.nodeCheck(word2);
     // 迭代遍历的路径点列表
     PathNodeList<PathNode> findPaths = new PathNodeList<PathNode>();
     // 确认的路径列表
