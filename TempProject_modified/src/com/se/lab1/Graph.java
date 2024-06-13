@@ -1,5 +1,6 @@
 package com.se.lab1;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -47,11 +48,14 @@ class Graph {
                 + retNodes.get(0).getWord() + ".";
       } else {
         // The bridge words from word1 to word2 are: xxx, xxx, and xxx.
-        res += "The bridge words from " + word1 + " to " + word2 + " are:";
+        StringBuffer buf = new StringBuffer("The bridge words from " + word1 + " to " + word2 + " are:");
+        //res += "The bridge words from " + word1 + " to " + word2 + " are:";
         for (int i = 0; i < retNodes.size() - 1; i++) {
-          res += " " + retNodes.get(i).getWord() + ",";
+          //res += " " + retNodes.get(i).getWord() + ",";
+          buf.append(" ").append(retNodes.get(i).getWord()).append(",");
         }
-        res += "and" + " " + retNodes.get(retNodes.size() - 1).getWord() + ".";
+        res = buf.toString() + "and" + " " + retNodes.get(retNodes.size() - 1).getWord() + ".";
+        //res += "and" + " " + retNodes.get(retNodes.size() - 1).getWord() + ".";
       }
     }
     return res;
@@ -62,6 +66,7 @@ class Graph {
     String wordsStr = Lab1.replaceStr(inputText);
     String[] words = wordsStr.split("\\s+");
     GraphNodeList<GraphNode> retNodes;
+    Random random = new SecureRandom();
     for (int i = 0; i < words.length - 1; i++) {
       word1 = words[i];
       word2 = words[i + 1];
@@ -71,14 +76,12 @@ class Graph {
         if (retNodes.size() == 1) {
           res += "[" + retNodes.get(0).getWord() + "] ";
         } else {
-          Random random = new Random();
           int s = random.nextInt(retNodes.size() - 1);
           res += "[" + retNodes.get(s).getWord() + "] ";
         }
       }
     }
-    res += words[words.length - 1];
-    return res;
+    return res + words[words.length - 1];
   }
 
   public GraphNodeList<GraphNode> calculateBridge(String word1, String word2) {
@@ -166,7 +169,7 @@ class Graph {
 
   public String randomWalk() {
     String ret = "";
-    Random random = new Random();
+    Random random = new SecureRandom();
     int randomNodeIndex;
     if (this.graphNodes.size() == 1) {
       randomNodeIndex = 0;

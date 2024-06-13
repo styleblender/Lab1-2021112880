@@ -9,13 +9,13 @@ import java.util.Scanner;
 import javax.swing.JComponent;
 
 public class Lab1  {
-  public static String fileUrl;
-  public static String[] words;
-  public static Graph t;
+  protected static String fileUrl = "C:\\lessons\\2024spring\\software\\lab\\lab1\\code\\test.txt";
+  protected static String[] words;
+  protected static Graph t;
 
   public static void main(String[] args) throws CloneNotSupportedException {
     System.out.println("这里是修改2");
-    fileUrl = "C:\\lessons\\2024spring\\software\\lab\\lab1\\code\\test.txt";
+    //fileUrl = "C:\\lessons\\2024spring\\software\\lab\\lab1\\code\\test.txt";
     readInFile();
     Scanner sc = new Scanner(System.in);
     while (true){
@@ -115,12 +115,12 @@ public class Lab1  {
     try {
       process = run.exec(str);
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      System.out.println(e.getMessage());
     }
     try {
       process.waitFor();
     } catch (InterruptedException e) {
-      throw new RuntimeException(e);
+      System.out.println(e.getMessage());
     }
     return true;
   }

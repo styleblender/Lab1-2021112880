@@ -30,7 +30,7 @@ class GraphNodeList<E> extends ArrayList<E>  {
     GraphNode queryNode = (GraphNode) e;
     for (int i = 0; i < this.size(); i++) {
       if (this.get(i).equals(queryNode)) {
-        multiIndex.add(new Integer(i));
+        multiIndex.add(Integer.valueOf(i));
       }
     }
     return multiIndex;

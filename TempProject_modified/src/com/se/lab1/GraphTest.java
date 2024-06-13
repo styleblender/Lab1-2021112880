@@ -8,8 +8,8 @@ class GraphTest {
 
     @org.junit.jupiter.api.Test
     void queryBridgeWords() {
-        Lab1 lab1 = new Lab1();
-        Lab1.fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
+        //Lab1 lab1 = new Lab1();
+        //Lab1.fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
         Lab1.readInFile();
         Graph graph = Lab1.t;
         String word1 = "abc";
