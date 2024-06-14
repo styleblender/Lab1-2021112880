@@ -105,6 +105,9 @@ class Graph {
     String res = "";
     GraphNode startNode = this.graphNodes.nodeCheck(word1);
     GraphNode endNode = this.graphNodes.nodeCheck(word2);
+    if(startNode == null || endNode == null) {
+      return "No " + word1 + " or " + word2 + " in the graph!";
+    }
     // 迭代遍历的路径点列表
     PathNodeList<PathNode> findPaths = new PathNodeList<PathNode>();
     // 确认的路径列表

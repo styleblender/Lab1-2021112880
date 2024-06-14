@@ -12,17 +12,8 @@ class GraphTest {
         //Lab1.fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
         Lab1.readInFile();
         Graph graph = Lab1.t;
-        String word1 = "quick";
-        String word2 = "fox";
-        Assert.assertEquals("The bridge words from quick to fox are: brown, blue,and red.",graph.queryBridgeWords(word1,word2));
-        word1 = "report";
-        word2 = "roman";
-        Assert.assertEquals("No report or roman in the graph!",graph.queryBridgeWords(word1,word2));
-        word1 = "digit010";
-        word2 = "(word)*";
-        Assert.assertEquals("No digit010 or (word)* in the graph!",graph.queryBridgeWords(word1,word2));
-        word1 = "abc";
-        word2 = "abc";
+        String word1 = "abc";
+        String word2 = "abc";
         Assert.assertEquals("No abc or abc in the graph!",graph.queryBridgeWords(word1,word2));
         word1 = "the";
         word2 = "quick";
@@ -33,5 +24,28 @@ class GraphTest {
         word1 = "quick";
         word2 = "fox";
         Assert.assertEquals("The bridge words from quick to fox are: brown, blue,and red.",graph.queryBridgeWords(word1,word2));
+    }
+
+    @org.junit.jupiter.api.Test
+    void shortestPathTest() {
+        //Lab1 lab1 = new Lab1();
+        //Lab1.fileUrl = "C:\\Users\\LX\\Desktop\\e\\2.txt";
+        Lab1.readInFile();
+        Graph graph = Lab1.t;
+        try {
+            String word1 = "quick";
+            String word2 = "fox";
+            Assert.assertEquals("Path 0 :quick->brown->fox.\n" +
+                    "Path 1 :quick->blue->fox.\n" +
+                    "Path 2 :quick->red->fox.\n",graph.calcShortestPath(word1,word2));
+            word1 = "report";
+            word2 = "roman";
+            Assert.assertEquals("No report or roman in the graph!",graph.calcShortestPath(word1,word2));
+            word1 = "digit010";
+            word2 = "(word)*";
+            Assert.assertEquals("No digit010 or (word)* in the graph!",graph.calcShortestPath(word1,word2));
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
